@@ -3,7 +3,7 @@
 ///////////// CONFIG /////////////////
 $webhookurl = "https://discord.com/api/webhooks/826908608750157874/gVP6H-9A3FRmgtWm4s8rrZsaob35ccSNpASHw1q7VOj70EVB5UankfhJXS_XDKWj4aHQ"; // Webhook URL
 $userid = ''; // buraya takip etmek istediğiniz kullanıcının id'si
-$invitelink = ''; // davet bağlantısı
+$invitecode = ''; // davet bağlantısı
 /////////////////////////////////////
 
 date_default_timezone_set('Europe/Istanbul');
