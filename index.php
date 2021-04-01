@@ -3,12 +3,13 @@
 ///////////// CONFIG /////////////////
 $webhookurl = "https://discord.com/api/webhooks/826908608750157874/gVP6H-9A3FRmgtWm4s8rrZsaob35ccSNpASHw1q7VOj70EVB5UankfhJXS_XDKWj4aHQ"; // Webhook URL
 $userid = ''; // buraya takip etmek istediğiniz kullanıcının id'si
+$invitelink = ''; // davet bağlantısı
 /////////////////////////////////////
 
 date_default_timezone_set('Europe/Istanbul');
 $date = date('m/d/Y h:i:s a', time());
 
-$url = "https://discord.com/api/v8/invites/h5YR76TETg?with_counts=true";
+$url = 'https://discord.com/api/v8/invites/'.$invitelink.'?with_counts=true';
 
 $curl = curl_init($url);
 curl_setopt($curl, CURLOPT_URL, $url);
@@ -25,11 +26,6 @@ $json = json_decode($resp, true);
 
 
 if($json['approximate_presence_count'] == '2' or $json['approximate_presence_count'] == '1'){
-
-//=======================================================================================================
-// Compose message. You can use Markdown
-// Message Formatting -- https://discordapp.com/developers/docs/reference#message-formatting
-//========================================================================================================
 
 $timestamp = date("c", strtotime("now"));
 $aga = $json['approximate_presence_count'];
